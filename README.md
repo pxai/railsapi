@@ -1,6 +1,5 @@
 # Reminders for RoR
-![Build Status](https://travis-ci.org/pxai/rails-react-fullstack.svg?branch=master)]
-(https://travis-ci.org/pxai/rails-react-fullstack)
+![Build Status](https://travis-ci.org/pxai/rails-react-fullstack.svg?branch=master)
 
 ## General comands
 Generate
