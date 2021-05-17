@@ -1,44 +1,51 @@
 # Reminders for RoR
-![Build Status](https://travis-ci.org/pxai/rails-react-fullstack.svg?branch=master)
+![Build Status](https://travis-ci.org/pxai/railsapi.svg?branch=master)
 
 ## General comands
 Generate
-```
+```shell
 rails new app_name
 ```
 
 run
-```
+```shell
 rails server
 ```
 
 Test
-```
+```shell
 rails test
+```
+or
+```shell
+rake test
 ```
 
 ## Generators
 Generate controlers. This is about, with about method
-```
+```shell
 rails generate controller about about
 ```
 
 Generate models:
-```
+```shell
 rails generate model Lesson name:string description:text
 ```
 
-Then:
+Generate resource:
+```shell
+rails generate resource entry title:string body:text published:boolean
 ```
+
+Then:
+```shell
 rake db:migrate
 ```
 for other envs:
-```
+```shell
 export RAILS_ENV=production
 rake db:migrate
 ```
-
-T
 
 # README
 
