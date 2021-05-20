@@ -37,6 +37,11 @@ Generate resource:
 rails generate resource entry title:string body:text published:boolean
 ```
 
+Check routes:
+```shell
+rails routes
+```
+
 Then:
 ```shell
 rake db:migrate
