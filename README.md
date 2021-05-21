@@ -1,6 +1,8 @@
 # Reminders for RoR
 ![Build Status](https://travis-ci.org/pxai/railsapi.svg?branch=master)
 
+[![CircleCI](https://circleci.com/gh/pxai/railsapi.svg?style=svg)](https://circleci.com/gh/pxai/railsapi)
+
 ## General comands
 Generate
 ```shell
