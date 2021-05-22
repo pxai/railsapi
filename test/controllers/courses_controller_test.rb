@@ -12,7 +12,14 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create course" do
-    post courses_url(name: "aaa", )
+    post courses_url(title: "aaa", description: "bbb", published: "ccc")
     assert_response :success
+
+    course = JSON.parse(@response.body)
+
+    get course_url(course['id'])
+    generated = JSON.parse(@response.body)
+
+    assert_equal generated, course
   end
 end
