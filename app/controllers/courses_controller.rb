@@ -12,12 +12,12 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @course = Course.new(title: "...", body: "...")
+    @course = Course.new(title: params[:title], description: params[:description], published: params[:published])
 
     if @course.save
-      redirect_to @course
+      render :json => @course
     else
-      render :new
+      render :json => {:error => true, :msg => "Error creating Course"}.to_json
     end
   end
 end

@@ -10,4 +10,9 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
     get course_url(1)
     assert_response :success
   end
+
+  test "should create course" do
+    post courses_url(name: "aaa", )
+    assert_response :success
+  end
 end
