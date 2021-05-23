@@ -64,12 +64,29 @@ Populate the Database
 rake db:seed
 ```
 
+## Curl commands
+
+```shell
+curl http://localhost:3000/courses
+```
+
+```shell
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"title":"xyz","description":"xyz", "published": "false"}' \
+  http://localhost:3000/courses
+```
+
+```shell
+curl -i -X POST -H "Content-Type: application/json" -d  '{"title":"xyz","description":"xyz", "published": "false"}' http://localhost:3000/courses
+```
+
+## SQLite
+```sql
+ insert into courses (title, description, published, created_at, updated_at) values ("aaa", "aaa description" , false, DATE('now'), DATE('now'));
+ ```
+
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
 
 * Ruby version
 

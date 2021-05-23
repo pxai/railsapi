@@ -1,11 +1,10 @@
 class CoursesController < ApplicationController
-  respond_to :json
   def index
-    render :json => Course.all
+    render :json => Course.all, serializer: CourseSerializer
   end
 
   def show
-    render :json => Course.find(params[:id])
+    render :json => Course.find(params[:id]), serializer: CourseSerializer
   end
 
   def new
