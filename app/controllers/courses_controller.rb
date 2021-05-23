@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  respond_to :json
   def index
     render :json => Course.all
   end

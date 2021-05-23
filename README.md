@@ -39,6 +39,11 @@ Generate resource:
 rails generate resource entry title:string body:text published:boolean
 ```
 
+Generate serializers
+```shell
+rails g serializer category
+```
+
 Check routes:
 ```shell
 rails routes
@@ -52,6 +57,11 @@ for other envs:
 ```shell
 export RAILS_ENV=production
 rake db:migrate
+```
+
+Populate the Database
+```
+rake db:seed
 ```
 
 # README
