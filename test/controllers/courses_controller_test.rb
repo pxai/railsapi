@@ -38,4 +38,26 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal course['title'], updatedCourse['title']
   end
+
+  test "should delete course" do
+    idToDelete = '1'
+    get course_url(idToDelete)
+    course = JSON.parse(@response.body)
+    assert_response :success
+    assert_not_nil course
+
+    delete course_url(idToDelete)
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert_equal idToDelete, response['id']
+  end
+
+  test "should not delete non-existent course" do
+    idToDelete = '1'
+
+    delete course_url(idToDelete)
+    assert_response :success
+    response = JSON.parse(@response.body)
+  end
 end

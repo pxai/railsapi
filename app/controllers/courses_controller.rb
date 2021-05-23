@@ -33,4 +33,14 @@ class CoursesController < ApplicationController
       render :json => {:error => true, :msg => "Error updating Course"}.to_json
     end
   end
+
+  def destroy
+    @course = Course.find(params[:id])
+
+    if @course.delete
+      render :json => {:id => params[:id]}
+    else
+      render :json => {:error => true, :msg => "Error deleting Course"}.to_json
+    end
+  end
 end
