@@ -20,4 +20,17 @@ class CoursesController < ApplicationController
       render :json => {:error => true, :msg => "Error creating Course"}.to_json
     end
   end
+
+  def update
+    @course = Course.find(params[:id])
+    @course.title = params[:title]
+    @course.description = params[:description]
+    @course.published = params[:published]
+
+    if @course.save
+      render :json => @course
+    else
+      render :json => {:error => true, :msg => "Error updating Course"}.to_json
+    end
+  end
 end

@@ -22,4 +22,20 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal generated, course
   end
+
+  test "should update course" do
+    get course_url(1)
+    course = JSON.parse(@response.body)
+
+    course['title'] = "changed"
+    put course_url(1, course)
+    assert_response :success
+
+    updatedCourse = JSON.parse(@response.body)
+
+    get course_url(1)
+    course = JSON.parse(@response.body)
+
+    assert_equal course['title'], updatedCourse['title']
+  end
 end
