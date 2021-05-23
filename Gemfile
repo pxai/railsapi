@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'active_model_serializers', '~> 0.10.0'
 # This one seems more powerful
 gem 'jsonapi-rails'
+# And this looks simpler
+gem 'blueprinter'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -1,3 +1,4 @@
+# rails g serializer category
 class CourseSerializer < ActiveModel::Serializer
-  attributes :title, :description
+  attributes :id, :title, :description
 end

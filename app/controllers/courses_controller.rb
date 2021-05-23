@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   def index
-    render :json => Course.all, serializer: CourseSerializer
+    render :json => Course.all
   end
 
   def show

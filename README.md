@@ -33,6 +33,10 @@ Generate models:
 ```shell
 rails generate model Lesson name:string description:text
 ```
+Model with references
+```
+ rails g model dish name:string rating:integer restaurant:references
+```
 
 Generate resource:
 ```shell
@@ -43,6 +47,11 @@ Generate serializers
 ```shell
 rails g serializer category
 ```
+jsonapi-rb:
+```
+rails generate jsonapi:serializable tag
+```
+
 
 Check routes:
 ```shell

@@ -1,7 +1,9 @@
 require "test_helper"
 
 class TagTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "can create Tag model" do
+    tag = Tag.new
+    assert_nil tag.name
+    assert_nil tag.description
+  end
 end
